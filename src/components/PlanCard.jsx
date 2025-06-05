@@ -16,10 +16,14 @@ const PlanCard = ({ title, subtitle, channels, price, img, offer }) => {
 
   
         {/* Image */}
-        <div className="relative ">
-          <img src={img} alt={title} className="h-48 sm:h-48 md:h-56 object-cover w-full max-[600px]:h-36" />
-          <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent" />
-        </div>
+        <div className="relative w-full h-48 sm:h-48 md:h-56"> {/* Added w-full and responsive height */}
+                <img
+                    src={img}
+                    alt={title}
+                    className="object-cover object-center w-full h-full" // Changed to w-full h-full and object-center
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent" />
+            </div>
   
         {/* Card Content */}
         <div className="bg-gradient-to-t from-blue-900/50 to-transparent p-3 sm:p-4 flex flex-col gap-1">
